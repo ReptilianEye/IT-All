@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% block title %}Schedule{% endblock %} {% block content %}
+
+<section class="schedule_box_container container_schedule">
+    <br />
+    <h3 style="color: #FF1083;" align="center">{{tournament.name}}</h3>
+    <h4 align="center" style="color: white;">{{tournament.time.strftime("%H:%M")}}&emsp;&emsp;&emsp;{{tournament.date}}&emsp;&emsp;&emsp;{{tournament.location}}</h4>
+    <div style="margin-right: 5%; margin-left:5%">
+          <h5 align="center" style="color: white; ">
+          {{tournament.description}}</h5> 
+  </div>
+            {% if user.is_admin and not tournament.is_public %}
+            <a href="/publish-schedule ">
+                <button id="btn" style="background-color: rgb(55, 65, 95) " type="button " class="btn-danger_nav_schedule">
+        Publish
+      </button>
+            </a>
+            
+            {% endif %}
+        </div>
+        <br>
+</section>
+{% endblock %}

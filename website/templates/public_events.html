@@ -1,0 +1,76 @@
+{% extends "base.html" %} {% block title %}Public events{% endblock %} {% block
+content %}
+<section class="tournaments_box_container container_tournaments">
+  <br />
+  <h3 align="center">Public Events</h3>
+  <!-- {% for event in events %}
+  <div onClick="JoinEvent({{event.id}}) ">
+    <h3 align="center">{{event.name}}</h3>
+  </div>
+  {% endfor %} -->
+  <table style="margin: auto">
+    <thead style="display: flex; margin-bottom: 15px; margin-top: 15px">
+      <tr>
+        <div align="center ">
+          <td></td>
+        </div>
+      </tr>
+      <tr class="btn-danger_nav_list_group_tournaments">
+        <div align="center ">
+          <td>Name</td>
+        </div>
+      </tr>
+      <tr class="btn-danger_nav_list_group_tournaments">
+        <div align="center ">
+          <td>Number Of Partakers</td>
+        </div>
+      </tr>
+      <tr class="btn-danger_nav_list_group_tournaments">
+        <div align="center ">
+          <td>Date</td>
+        </div>
+      </tr>
+      <tr class="btn-danger_nav_list_group_tournaments">
+        <div align="center ">
+          <td>Location</td>
+        </div>
+      </tr>
+    </thead>
+
+    {% for event in events %}
+
+    <tbody
+      class="btn_tournaments_list"
+      onClick="JoinEvent({{event.id}}) "
+      style="display: flex; margin-bottom: 15px; position: relative"
+    >
+      <tr class="btn-danger_nav_list_group_tournaments_name" align="center ">
+        <td>{{event.name}}</td>
+      </tr>
+      <tr class="btn-danger_nav_list_group_tournaments_name" align="center ">
+        <td>{{event.partNumber}}/{{event.max_part}}</td>
+      </tr>
+      <tr class="btn-danger_nav_list_group_tournaments_name" align="center ">
+        <td>{{event.date}}</td>
+      </tr>
+      <tr class="btn-danger_nav_list_group_tournaments_name" align="center ">
+        <td>{{event.location}}</td>
+      </tr>
+    </tbody>
+
+    {% endfor %}
+    <br />
+  </table>
+
+  <br />
+  <div align="center">
+    <a href="/new-tournament ">
+      <button id="btn" type="button " class="btn-danger_nav_tournaments">
+        Generate new event
+      </button>
+    </a>
+  </div>
+  <br />
+</section>
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "base.html" %} {% block title %}Home page{% endblock %} {% block content %}
+
+<section class="home_box_container container_home">
+    <div>
+        <!-- <center><img src="../static/logo 31lo.png" width="250px" /></center> -->
+    <br />
+        <h1 style="color: #9FF6F6;" align="center">Welcome to </h1>
+    <br />
+    <br />
+        
+        <h1 align="center" style="font-size:10vw; color:#FF1083" >IT-ALL</h1>
+        <div style="margin-right: 5%; margin-left:5%">
+        <h5 align="center" style="color: #9FF6F6; ">
+        The way to IT for ALL
+    </h5> 
+</div>
+</div>
+
+    <br />
+    <form method="POST">
+        <div align="center">
+            <a href="/tournaments">
+                <button id="btn" type="button" class="btn-danger_nav_generate">
+          Your Events
+        </button>
+            </a>
+        </div>
+    </form>
+</section>
+<footer align="center" class="sticky-footer">
+    
+    <p style="color: #9FF6F6; text-align: center">
+        © Created in cooperation with Krakow Innovation Games and Liceum 31 Krakow
+
+    </p>
+    <hr style="width: 20%;" />
+
+</footer>
+
+{% endblock %}
